@@ -170,6 +170,9 @@ public class BasePage {
         if (!titleStatus) {
             outputWrongTitle();
         }
+        if (driver.getTitle().contains("")) {
+            System.out.println(" NO TITLE " + driver.getCurrentUrl());
+        }
         return titleStatus;
     }
 
