@@ -79,7 +79,9 @@ public class Constant {
                 "NaughtyDate",
                 "MeetWild",
                 "BigoFun",
-                "Best dating worldwide"
+                "Best dating worldwide",
+                "Dating Site ONLINE",
+                "Jucydate"
         );
         public static final int NUMBER_OF_VISIT_SITE_REG_BUTTONS = 24;
         public static final int NUMBER_OF_PICTURE_REG_BUTTONS = 3;
