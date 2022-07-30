@@ -121,7 +121,9 @@ public class Constant {
                 "Fatflirt",
                 "Fatflirt",
                 "One-Night",
-                "dating"
+                "dating",
+                "Women Seeking",
+                "Military Pen Pals"
         );
         public static final List<String> AUTHORS_TITLES = Arrays.asList(
                 "Samantha",
