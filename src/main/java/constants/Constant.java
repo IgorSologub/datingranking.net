@@ -90,7 +90,7 @@ public class Constant {
         public static final int NUMBER_OF_PICTURE_REG_BUTTONS = 3;
         public static final int NUMBER_OF_VISIT_SITE_REG_BUTTONS_SUGAR_DADDIES_PAGE = 3;
         public static final int NUMBER_OF_VISIT_SITE_REG_BUTTONS_IN_TOP_SITES_FOR_SUGAR_DATING_SUGAR_DADDIES_PAGE = 4;
-        public static final int NUMBER_OF_SEND_MESSAGE_REG_BUTTONS_SUGAR_DADDIES_PAGE = 6;
+        public static final int NUMBER_OF_SEND_MESSAGE_REG_BUTTONS_SUGAR_DADDIES_PAGE = 5;
         public static final int NUMBER_OF_VISIT_SITE_REG_BUTTONS_LOCAL_HOOKUP_PAGE = 5;
         public static final int NUMBER_OF_VISIT_SITE_IN_TEXT_REG_BUTTON = 5;
         public static final int NUMBER_OF_VISIT_SITE_REG_BUTTONS_MAIN_PAGE = 4;
