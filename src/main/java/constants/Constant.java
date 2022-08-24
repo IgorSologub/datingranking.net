@@ -84,7 +84,9 @@ public class Constant {
                 "Jucydate",
                 "Craigslist",
                 "Exciting talks and flirting with hot girls!",
-                "Exciting chats with hot women"
+                "Exciting chats with hot women",
+                "Casualdating",
+                "Loveeto.com"
         );
         public static final int NUMBER_OF_VISIT_SITE_REG_BUTTONS = 24;
         public static final int NUMBER_OF_PICTURE_REG_BUTTONS = 3;
@@ -123,7 +125,8 @@ public class Constant {
                 "One-Night",
                 "dating",
                 "Women Seeking",
-                "Military Pen Pals"
+                "Military Pen Pals",
+                "Chat Room"
         );
         public static final List<String> AUTHORS_TITLES = Arrays.asList(
                 "Samantha",
@@ -158,7 +161,7 @@ public class Constant {
         public static final int NUMBER_OF_READ_REVIEW_SUGAR_DADDIES_PAGE = 3;
         public static final int NUMBER_OF_READ_FULL_REVIEW_SUGAR_DADDIES_PAGE = 4;
         public static final int NUMBER_OF_READ_FULL_REVIEW_LOCAL_HOOKUP_PAGE = 5;
-        public static final int NUMBER_OF_ARTICLES_LOCAL_HOOKUP_PAGE = 20;
+        public static final int NUMBER_OF_ARTICLES_LOCAL_HOOKUP_PAGE = 10;
         public static final int NUMBER_OF_READ_REVIEW_LOCAL_HOOKUP_PAGE = 5;
         public static final int NUMBER_OF_READ_FULL_REVIEW_MAIN_PAGE = 15;
         public static final int NUMBER_OF_POPULAR_PAGES_REVIEW_PAGE = 4;
