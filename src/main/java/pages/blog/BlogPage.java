@@ -54,7 +54,7 @@ public class BlogPage extends BasePage {
         if (!isVisible) {
             waitOneSeconds();
             submitButtonClick();
-            waitFiveSeconds();
+            waitTwoSeconds();
             isVisible = driver.findElements(submitMessage).size() > 0;
         }
         return isVisible;
@@ -65,7 +65,7 @@ public class BlogPage extends BasePage {
         if (!errorsCheck) {
             waitOneSeconds();
             submitButtonClick();
-            waitFiveSeconds();
+            waitTwoSeconds();
             errorsCheck = driver.findElements(submitMessage).size() == 3;
         }
         return errorsCheck;

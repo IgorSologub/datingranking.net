@@ -1,7 +1,7 @@
 package tests.reviewCategory;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import tests.base.BaseTest;
 
 import static constants.Constant.Footer.FOOTER_TITLES;
@@ -13,21 +13,21 @@ import static constants.Constant.Reviews.NUMBER_OF_READ_REVIEW_BUTTONS_REVIEW_CA
 import static constants.Constant.Reviews.REVIEW_TITLES;
 import static constants.Constant.Urls.MAIN_PAGE_URL;
 import static constants.Constant.Urls.REVIEW_CATEGORY_URL;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class ReviewCategoryTest extends BaseTest {
 
-    @BeforeEach
+    @BeforeMethod
     public void setUp () {
         startDriver("reviewCategory");
         basePage.goToUrl(REVIEW_CATEGORY_URL);
         basePage.waitOneSeconds();
-        basePage.closePopup();
     }
 
-    @Test
+    @Test(invocationCount = 2, successPercentage = 99)
     public void headerButtonsTest () {
+        basePage.closePopup();
         int goodTitlesCount = 0;
         for (int i = 1; i <= NUMBER_OF_GOOD_HEADER_BUTTONS; i++) {
             basePage.headerMenuOpen();
@@ -41,8 +41,9 @@ public class ReviewCategoryTest extends BaseTest {
         assertEquals(NUMBER_OF_GOOD_HEADER_BUTTONS, goodTitlesCount);
     }
 
-    @Test
+    @Test(invocationCount = 2, successPercentage = 99)
     public void footerButtonsTest () {
+        basePage.closePopup();
         int goodTitlesCount = 0;
         for (int i = 1; i <= NUMBER_OF_GOOD_FOOTER_BUTTONS; i++) {
             if (i == 9) {i++; goodTitlesCount++;}
@@ -56,15 +57,17 @@ public class ReviewCategoryTest extends BaseTest {
         assertEquals(NUMBER_OF_GOOD_FOOTER_BUTTONS, goodTitlesCount);
     }
 
-    @Test
+    @Test(invocationCount = 2, successPercentage = 99)
     public void mainLogoLinkTest () {
+        basePage.closePopup();
         basePage.mainLogoButtonClick();
         basePage.waitOneSeconds();
         assertEquals(MAIN_PAGE_URL, basePage.getCurrentUrl());
     }
 
-    @Test
+    @Test(invocationCount = 2, successPercentage = 99)
     public void changeLanguageButtonTest () {
+        basePage.closePopup();
         int goodUrlsCount = 0;
         for (int i = 2; i <= MAX_AMOUNT_LANGUAGE_CHANGE_BUTTONS + 1; i++) {
             basePage.headerMenuOpen();
@@ -79,14 +82,15 @@ public class ReviewCategoryTest extends BaseTest {
         assertEquals(MAX_AMOUNT_LANGUAGE_CHANGE_BUTTONS, goodUrlsCount);
     }
 
-    @Test
+    @Test(invocationCount = 2, successPercentage = 99)
     public void visitSiteRegButtonTest () {
+        basePage.closePopup();
         int goodTitlesCount = 0;
         for (int i = 1; i <= NUMBER_OF_VISIT_SITE_REG_BUTTONS; i++) {
             basePage.waitOneSeconds();
             reviewCategoryPage.visitSiteRegButtonClick(i);
             basePage.nextTab();
-            basePage.waitOneMinute();
+            basePage.waitThirtySeconds();
             if (basePage.checkTitles(REG_TITLES)) { goodTitlesCount++; }
             basePage.waitOneSeconds();
             basePage.closeTabAndMoveToNext();
@@ -94,8 +98,9 @@ public class ReviewCategoryTest extends BaseTest {
         assertEquals(NUMBER_OF_VISIT_SITE_REG_BUTTONS, goodTitlesCount);
     }
 
-    @Test
+    @Test(invocationCount = 2, successPercentage = 99)
     public void readReviewButtonTest () {
+        basePage.closePopup();
         int goodTitlesCount = 0;
         for (int i = 1; i <= NUMBER_OF_READ_REVIEW_BUTTONS_REVIEW_CATEGORY; i++) {
             reviewCategoryPage.readReviewButtonClick(i);
@@ -108,8 +113,9 @@ public class ReviewCategoryTest extends BaseTest {
         assertEquals(NUMBER_OF_READ_REVIEW_BUTTONS_REVIEW_CATEGORY, goodTitlesCount);
     }
 
-    @Test
+    @Test(invocationCount = 2, successPercentage = 99)
     public void paginationButtonTest () {
+        basePage.closePopup();
         reviewCategoryPage.paginationButtonClick();
         basePage.waitOneSeconds();
         assertTrue(reviewCategoryPage.urlPaginationCheck());

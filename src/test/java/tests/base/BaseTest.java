@@ -1,8 +1,8 @@
 package tests.base;
 
 import common.CommonActions;
-import org.junit.jupiter.api.AfterEach;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import pages.base.BasePage;
 import pages.blog.BlogPage;
 import pages.blogCategory.BlogCategoryPage;
@@ -72,7 +72,7 @@ public class BaseTest {
 
     }
 
-    @AfterEach
+    @AfterMethod
     public void clearCookiesAndExit () {
         basePage.clearCookiesAndLocalStorageAndClose();
     }

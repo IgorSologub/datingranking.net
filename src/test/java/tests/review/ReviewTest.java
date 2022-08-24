@@ -1,7 +1,7 @@
 package tests.review;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import tests.base.BaseTest;
 
 import static constants.Constant.CommentForm.*;
@@ -14,21 +14,21 @@ import static constants.Constant.Reg.REG_TITLES;
 import static constants.Constant.Reviews.*;
 import static constants.Constant.Urls.MAIN_PAGE_URL;
 import static constants.Constant.Urls.REVIEW_PAGE_URL;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class ReviewTest extends BaseTest {
 
-    @BeforeEach
+    @BeforeMethod
     public void setUp () {
         startDriver("reviewCategory");
         basePage.goToUrl(REVIEW_PAGE_URL);
         basePage.waitOneSeconds();
-        basePage.closePopup();
     }
 
-    @Test
+    @Test(invocationCount = 2, successPercentage = 99)
     public void headerButtonsTest () {
+        basePage.closePopup();
         int goodTitlesCount = 0;
         for (int i = 1; i <= NUMBER_OF_GOOD_HEADER_BUTTONS; i++) {
             basePage.headerMenuOpen();
@@ -42,8 +42,9 @@ public class ReviewTest extends BaseTest {
         assertEquals(NUMBER_OF_GOOD_HEADER_BUTTONS, goodTitlesCount);
     }
 
-    @Test
+    @Test(invocationCount = 2, successPercentage = 99)
     public void footerButtonsTest () {
+        basePage.closePopup();
         int goodTitlesCount = 0;
         for (int i = 1; i <= NUMBER_OF_GOOD_FOOTER_BUTTONS; i++) {
             if (i == 9) {i++; goodTitlesCount++;}
@@ -57,30 +58,33 @@ public class ReviewTest extends BaseTest {
         assertEquals(NUMBER_OF_GOOD_FOOTER_BUTTONS, goodTitlesCount);
     }
 
-    @Test
+    @Test(invocationCount = 2, successPercentage = 99)
     public void mainLogoLinkTest () {
+        basePage.closePopup();
         basePage.mainLogoButtonClick();
         basePage.waitOneSeconds();
         assertEquals(MAIN_PAGE_URL, basePage.getCurrentUrl());
     }
 
-    @Test
+    @Test(invocationCount = 2, successPercentage = 99)
     public void visitSiteRegButtonTest () {
+        basePage.closePopup();
         reviewPage.visitSiteRegButtonClick();
         basePage.nextTab();
-        basePage.waitOneMinute();
+        basePage.waitThirtySeconds();
         assertTrue(basePage.checkTitles(REG_TITLES));
         basePage.closeTabAndMoveToNext();
     }
 
-    @Test
+    @Test(invocationCount = 2, successPercentage = 99)
     public void pictureRegButtonsTest () {
+        basePage.closePopup();
         int goodTitlesCount = 0;
         for (int i = 1; i <= NUMBER_OF_PICTURE_REG_BUTTONS; i++) {
             basePage.waitOneSeconds();
             reviewPage.pictureRegButtonClick(i);
             basePage.nextTab();
-            basePage.waitOneMinute();
+            basePage.waitThirtySeconds();
             if (basePage.checkTitles(REG_TITLES)) { goodTitlesCount++; }
             basePage.waitOneSeconds();
             basePage.closeTabAndMoveToNext();
@@ -88,27 +92,30 @@ public class ReviewTest extends BaseTest {
         assertEquals(NUMBER_OF_PICTURE_REG_BUTTONS, goodTitlesCount);
     }
 
-    @Test
+    @Test(invocationCount = 2, successPercentage = 99)
     public void startButtonTest () {
+        basePage.closePopup();
         reviewPage.startButtonClick();
         basePage.waitOneSeconds();
         assertTrue(reviewPage.startButtonCheckUrl());
         basePage.waitOneSeconds();
     }
 
-    @Test
+    @Test(invocationCount = 2, successPercentage = 99)
     public void successfulCommentFormTest () {
+        basePage.closePopup();
         reviewPage.enterName(NAME)
                 .enterEmail(EMAIL)
                 .enterComment(COMMENT);
         basePage.waitOneSeconds();
         reviewPage.submitButtonClick();
-        basePage.waitFiveSeconds();
+        basePage.waitTwoSeconds();
         assertTrue(reviewPage.submitMessageVisibleCheck());
     }
 
-    @Test
+    @Test(invocationCount = 2, successPercentage = 99)
     public void nextSliderButtonTest () {
+        basePage.closePopup();
         reviewPage.scrollToSlider();
         basePage.waitOneSeconds();
         reviewPage.nextSliderButtonClick();
@@ -116,8 +123,9 @@ public class ReviewTest extends BaseTest {
         assertTrue(reviewPage.sliderBlockVisibleCheck());
     }
 
-    @Test
+    @Test(invocationCount = 2, successPercentage = 99)
     public void latestReviewsButtonTest () {
+        basePage.closePopup();
         int goodTitlesCount = 0;
         for (int i = 1; i <= NUMBER_OF_LATEST_REVIEW_BUTTONS; i++) {
             basePage.waitOneSeconds();
@@ -130,8 +138,9 @@ public class ReviewTest extends BaseTest {
         assertEquals(NUMBER_OF_LATEST_REVIEW_BUTTONS, goodTitlesCount);
     }
 
-    @Test
+    @Test(invocationCount = 2, successPercentage = 99)
     public void popularPagesButtonTest () {
+        basePage.closePopup();
         int goodTitlesCount = 0;
         for (int i = 1; i <= NUMBER_OF_POPULAR_PAGES_REVIEW_PAGE; i++) {
             basePage.waitOneSeconds();

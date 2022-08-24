@@ -86,7 +86,8 @@ public class Constant {
                 "Exciting talks and flirting with hot girls!",
                 "Exciting chats with hot women",
                 "Casualdating",
-                "Loveeto.com"
+                "Loveeto.com",
+                "Find the one who's right for you"
         );
         public static final int NUMBER_OF_VISIT_SITE_REG_BUTTONS = 24;
         public static final int NUMBER_OF_PICTURE_REG_BUTTONS = 3;
