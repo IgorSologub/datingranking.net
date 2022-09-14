@@ -90,7 +90,9 @@ public class Constant {
                 "Find the one who's right for you",
                 "BeSexcited",
                 "My Dirty Neighbour",
-                "Online Hookups"
+                "Online Hookups",
+                "Meet Ukrainian Women-DateNiceUkrainian.com",
+                "UNlimdate – website for meetings! Communication without limits"
         );
         public static final int NUMBER_OF_VISIT_SITE_REG_BUTTONS = 24;
         public static final int NUMBER_OF_PICTURE_REG_BUTTONS = 3;
@@ -130,7 +132,8 @@ public class Constant {
                 "dating",
                 "Women Seeking",
                 "Military Pen Pals",
-                "Chat Room"
+                "Chat Room",
+                "UNlimdate"
         );
         public static final List<String> AUTHORS_TITLES = Arrays.asList(
                 "Samantha",
