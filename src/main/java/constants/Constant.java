@@ -133,7 +133,9 @@ public class Constant {
                 "Women Seeking",
                 "Military Pen Pals",
                 "Chat Room",
-                "UNlimdate"
+                "UNlimdate",
+                "Women Looking",
+                "Women Sites"
         );
         public static final List<String> AUTHORS_TITLES = Arrays.asList(
                 "Samantha",
