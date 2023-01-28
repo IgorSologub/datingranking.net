@@ -61,7 +61,7 @@ public class Constant {
                 "Match",
                 "Tinder"
         );
-        public static final int NUMBER_OF_GOOD_FOOTER_BUTTONS = 47;
+        public static final int NUMBER_OF_GOOD_FOOTER_BUTTONS = 45;
     }
 
     public static class Reg {
