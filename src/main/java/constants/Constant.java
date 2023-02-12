@@ -92,7 +92,8 @@ public class Constant {
                 "My Dirty Neighbour",
                 "Online Hookups",
                 "Meet Ukrainian Women-DateNiceUkrainian.com",
-                "UNlimdate – website for meetings! Communication without limits"
+                "UNlimdate – website for meetings! Communication without limits",
+                "naughty-hub.com"
         );
         public static final int NUMBER_OF_VISIT_SITE_REG_BUTTONS = 24;
         public static final int NUMBER_OF_PICTURE_REG_BUTTONS = 3;
